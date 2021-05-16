@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Localization Study for Sugarizer v2</title>
+
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover"/>
+
+		<script src="lib/i18next.min.js"></script>
+		<script src="lib/axios.min.js"></script>
+
+	</head>
+
+	<body onload="initLanguage()">
+			<div id="ByUser">MESSAGE</div>
+			<div id="TutoActivityTurtleBlocksJSactivity">MESSAGE</div>
+			<div id="TutoOfflineContent">MESSAGE</div>
+			<div id="LicenseTerms">MESSAGE</div>
+			<div id="MISSING-TEXT">----</div>
+	</body>
+
+	<script src="js/init.js"></script>
+
+	<br/>
+	<button onclick="switchTo('en')">English</button>
+	<button onclick="switchTo('fr')">French</button>
+	<button onclick="switchTo('es')">Spanish</button>
+	<button onclick="switchTo('pt')">Portuguese</button>
+	<button onclick="switchTo('ar')">Arabic</button>
+</html>
