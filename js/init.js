@@ -1,7 +1,7 @@
 function initLanguage() {
 	i18next.init({
 		lng: "en",
-		debug: true,
+		debug: true, // DEBUG only
 		fallbackLng: "en",
 		resources: {}
 	}).then(function(t) {
@@ -37,7 +37,9 @@ function switchTo(language) {
 		loadLanguage(language).then(function(locales) {
 			i18next.addResourceBundle(language, "translation", locales);
 			i18next.changeLanguage(language);
-		})
+		}, function(){
+			i18next.changeLanguage(language); // Force fallback language
+		});
 	} else {
 		i18next.changeLanguage(language);
 	}
